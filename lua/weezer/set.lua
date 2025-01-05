@@ -22,7 +22,7 @@ vim.opt.tabstop 	        = 4
 vim.opt.softtabstop 	    = 4
 vim.opt.shiftwidth 	        = 4
 vim.opt.expandtab 	        = true
-vim.opt.smartindent 	    = false -- this mofo fucks up perfectly aligned indentation if true
+vim.opt.smartindent 	    = true -- this mofo fucks up perfectly aligned indentation if true
 vim.opt.scrolloff           = 15
 vim.opt.updatetime          = 50
 vim.opt.swapfile            = false
@@ -33,6 +33,10 @@ vim.opt.undodir             = vim.fn.stdpath("data") .. "/undodir"
 vim.opt.splitright          = true
 vim.opt.splitbelow          = true
 vim.opt.cursorline          = true
+-- end --
+
+-- block [lsp signcolumn] --
+vim.opt.signcolumn          = "yes" -- errors or warnings from lsp leaves a marker on the column
 -- end --
 
 -- block [highlight search] --
