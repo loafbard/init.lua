@@ -49,4 +49,5 @@ local floaterm_toggle = function()
 end
 
 vim.api.nvim_create_user_command("Floaterm", floaterm_toggle, {})
-vim.keymap.set({ "n" }, "tt", floaterm_toggle)
+vim.keymap.set("n", "tt", floaterm_toggle)
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")

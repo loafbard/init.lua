@@ -12,6 +12,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     spec = "weezer.after",
-    change_detection = { notify = false },
+    change_detection = { notify = true },
 })
+
+vim.cmd("set list")
 -- end --

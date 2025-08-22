@@ -13,6 +13,11 @@ return {
                     "--smart-case",
                 },
             },
+            pickers = {
+                find_files = {
+                    hidden = true,
+                }
+            },
             extensions = {
                 media_files = {
                     -- filetypes whitelist
@@ -31,6 +36,9 @@ return {
         vim.keymap.set("n",         "<leader>ps",       function() built_in.grep_string({ search = vim.fn.input("grep ") }) end)
         vim.keymap.set("n",         "<leader>fc",       function()
             built_in.find_files({ cwd = vim.fn.stdpath "config" })
+        end)
+        vim.keymap.set("n",         "<leader>fp",       function()
+            built_in.find_files({ cwd = "~/.person/" })
         end)
     end,
 }

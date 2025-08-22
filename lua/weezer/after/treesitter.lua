@@ -6,8 +6,11 @@ return {
     end,
     config = function()
         require("nvim-treesitter.configs").setup({
+            auto_install = true,
+            ignore_install = {},
+            modules = {},
             ensure_installed = {
-                "c", "asm", "lua", "rust", "vimdoc", "ada", "markdown", "glsl", "html", "css", "bash",
+                "c", "asm", "lua", "rust", "vimdoc", "ada", "markdown", "glsl", "html", "css", "bash", "fortran"
             },
             sync_install = false,
             highlight = {
