@@ -10,7 +10,7 @@ return {
             ignore_install = {},
             modules = {},
             ensure_installed = {
-                "c", "asm", "lua", "rust", "vimdoc", "ada", "markdown", "glsl", "html", "css", "bash", "fortran"
+                "c", "asm", "lua", "rust", "vimdoc", "ada", "markdown", "glsl", "html", "css", "bash", "fortran", "slang"
             },
             sync_install = false,
             highlight = {

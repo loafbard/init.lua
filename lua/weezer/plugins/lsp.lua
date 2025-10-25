@@ -10,10 +10,6 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "clangd",
-                    "glsl_analyzer",
-                    "typescript-language-server",
-                    "pyright",
-                    "rust-analyzer",
                 },
             }
         },
@@ -28,11 +24,7 @@ return {
         },
     },
     config = function()
-        local lspconfig = require("lspconfig")
-        lspconfig.lua_ls.setup {}
-        lspconfig.clangd.setup {}
-        lspconfig.glsl_analyzer.setup {}
-        lspconfig.pyright.setup {}
+        require("mason-lspconfig").setup()
 
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("weezer-lsp-attach", { clear = true }),
