@@ -8,8 +8,8 @@ vim.keymap.set("n",         "<leader>nl",       "<cmd>set nolist<CR>")
 -- end --
 
 -- block [lsp] --
-vim.keymap.set("n",          "[d",              vim.diagnostic.goto_prev)
-vim.keymap.set("n",          "]d",              vim.diagnostic.goto_next)
+vim.keymap.set("n",          "[d",              function () vim.diagnostic.jump({ count =-1, float = true }) end)
+vim.keymap.set("n",          "]d",              function () vim.diagnostic.jump({ count = 1, float = true }) end)
 vim.keymap.set("n",          "<leader>e",       vim.diagnostic.open_float)
 -- end --
 
@@ -18,6 +18,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     group = vim.api.nvim_create_augroup("weezer-highlight-yank", { clear = true }), -- this line is supposed to prevent mal-event-listening
     callback = function() vim.highlight.on_yank() end,
 })
+-- end --
+
+-- block --
+vim.keymap.set("n", "<leader>r", "@:")
 -- end --
 
 -- block [retain position after pasting] --
@@ -58,11 +62,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- block [camel to pascal] --
 vim.keymap.set("n", "<C-c>", "f_lvUhx")
--- end --
-
--- block [pascal to camel] --
-vim.keymap.set("n",         "<leader>ts",       [[:%s/[a-z]\@<=[A-Z]/_\l\0/]])
-vim.keymap.set("v",         "<leader>ts",       [[:s/[a-z]\@<=[A-Z]/_\l\0/]])
 -- end --
 
 -- block --

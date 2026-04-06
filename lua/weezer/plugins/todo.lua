@@ -16,7 +16,7 @@ return {
                 before            = "fg", -- "fg" or "bg" or empty
                 keyword           = "fg", -- "fg", "bg", "wide", "wide_bg", "wide_fg" or empty. (wide and wide_bg is the same as bg, but will also highlight surrounding characters, wide_fg acts accordingly but with fg)
                 after             = "fg", -- "fg" or "bg" or empty
-                pattern           = [[.*\[(KEYWORDS)\]\s*]], -- pattern or table of patterns, used for highlighting (vim regex). custom pattern, added by kiri
+                -- pattern           = [[.*\[(KEYWORDS)\]\s*]], -- pattern or table of patterns, used for highlighting (vim regex). custom pattern, added by kiri
                 comments_only     = true, -- uses treesitter to match keywords in comments only
                 max_line_len      = 400, -- ignore lines longer than this
                 exclude           = {}, -- list of file types to exclude highlighting
@@ -25,22 +25,23 @@ return {
     end,
 }
 -- [INFO] demo
+-- INFO: demo
 
 -- [HACK]
 
--- FIX:
--- FIXME:
--- BUG:
--- FIXIT:
--- ISSUE:
+-- [FIX]
+-- [FIXME]
+-- [BUG]
+-- [FIXIT]
+-- [ISSUE]
 
--- TESTING:
--- FAILED:
--- PASSED:
+-- [TESTING]
+-- [FAILED]
+-- [PASSED]
 
--- OPTIM:
--- OPTIMIZE:
--- PERFORMANCE:
+-- [OPTIM]
+-- [OPTIMIZE]
+-- [PERFORMANCE]
 
--- WARNING:
--- XXX:
+-- [WARNING]
+-- [XXX]

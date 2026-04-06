@@ -5,7 +5,7 @@ return {
         ts_update()
     end,
     config = function()
-        require("nvim-treesitter.configs").setup({
+        require("nvim-treesitter").setup({
             auto_install = true,
             ignore_install = {},
             modules = {},
@@ -18,5 +18,7 @@ return {
                 additional_vim_regex_highlighting = false,
             },
         })
+
+        vim.keymap.set("n", "<leader>ts", "<cmd>TSToggle highlight<CR>")
     end,
 }
